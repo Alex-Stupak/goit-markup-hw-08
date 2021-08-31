@@ -2,7 +2,7 @@
   &__margin:not(:last-child) {
     margin-bottom: 10px;
   }
-  &__margin:nth-last-child(2) {
+  &__margin:nth-last-child(-n + 5) {
     margin-bottom: 20px;
   }
 
@@ -126,6 +126,7 @@
     }
   }
   &__label-button {
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;

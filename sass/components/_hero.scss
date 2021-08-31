@@ -1,0 +1,57 @@
+.hero {
+  text-align: center;
+  background-color: $background-color-hero;
+  padding: 200px 0;
+
+  max-width: 1600px;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("/images/hero-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("/images/hero-background@2x.jpg");
+  }
+
+  &__title {
+    max-width: 696px;
+    margin: auto;
+
+    color: $primary-white-color;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    @media screen and(max-width: 1199px) {
+      font-size: 26px;
+      line-height: 1.6;
+      max-width: 360px;
+    }
+  }
+
+  &__primary-button {
+    @extend %button;
+    padding: 10px 32px;
+
+    &:hover {
+      background-color: $background-color-buttons;
+      transition: background-color $main-transition;
+    }
+  }
+}

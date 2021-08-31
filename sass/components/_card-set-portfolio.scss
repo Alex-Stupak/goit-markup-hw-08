@@ -1,0 +1,74 @@
+.portfolio-list {
+  // display: flex;
+  // flex-wrap: wrap;
+
+  margin-top: calc(-1 * 30px);
+  margin-left: calc(-1 * 30px);
+
+  &__item {
+    flex-basis: calc(100% / 3 - 30px);
+
+    margin-left: $card-set-gap;
+    margin-top: $card-set-gap;
+
+    &:focus,
+    &:hover {
+      transition: $main-transition;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+  &__link {
+    display: block;
+
+    &:hover .portfolio-overlay,
+    &:focus .portfolio-overlay {
+      transform: translateY(0);
+    }
+
+    &:hover .portfolio-overlay__actions,
+    &:focus .portfolio-overlay__actions {
+      opacity: 1;
+    }
+
+    &:hover .portfolio-overlay,
+    &:focus .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-list__thumb {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform $main-transition, opacity $main-transition;
+
+  &__actions {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 63px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: $primary-white-color;
+    opacity: 0;
+    transition: opacity $main-transition 250ms;
+  }
+}

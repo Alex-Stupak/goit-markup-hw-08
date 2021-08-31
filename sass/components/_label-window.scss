@@ -1,0 +1,145 @@
+.form {
+  &__margin:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__margin:nth-last-child(2) {
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    &:focus,
+    &:hover {
+      border-color: $accent-color;
+      outline: none;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+
+    &:focus-within .form__input-icon {
+      fill: $accent-color;
+      transition: fill $main-transition;
+    }
+
+    &:focus .form__input-icon,
+    &:hover .form__input-icon {
+      fill: $accent-color;
+      transition: fill $main-transition;
+    }
+
+    &:focus .form__input,
+    &:hover .form__input {
+      border-color: $accent-color;
+      outline: none;
+    }
+  }
+
+  &__label textarea::placeholder {
+    color: $placeholder;
+  }
+
+  &__input-name {
+    margin-bottom: 4px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
+
+  &__input-group-absolute {
+    position: relative;
+
+    &:focus,
+    &:hover {
+      border-color: $accent-color;
+      outline: none;
+      fill: $accent-color;
+    }
+  }
+
+  &__input-icon {
+    position: absolute;
+    top: 25%;
+    left: 12px;
+    transform: translateY(12%);
+    fill: $title-text-color;
+  }
+
+  &__input {
+    width: 100%;
+
+    padding: 13px 20px 13px 42px;
+    @include bordered($form-border, 4px);
+    transition: border $main-transition;
+  }
+
+  &__comment {
+    width: 448px;
+    height: 120px;
+
+    padding: 12px 16px;
+    @include bordered($form-border, 4px);
+
+    &:focus {
+      border-color: $accent-color;
+      outline: none;
+      transition: border $main-transition;
+    }
+  }
+
+  &__accept {
+    line-height: 1.71;
+  }
+
+  &__policy-link {
+    color: $accent-color;
+    text-decoration: underline;
+    padding-left: 5px;
+  }
+  &__border-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+
+    transition: background-color $main-transition;
+    border: 2px solid $title-text-color;
+    border-radius: 2px;
+  }
+
+  &__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0px;
+    padding: 0px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &:checked + .form__border-icon {
+      border-color: $accent-color;
+      background-color: $accent-color;
+      background-image: url("../images/check.svg");
+      background-size: contain;
+      background-origin: border-box;
+    }
+  }
+  &__label-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  &__submit-button {
+    @extend %button;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:hover {
+      background-color: $background-color-buttons;
+      transition: background-color $main-transition;
+    }
+  }
+}

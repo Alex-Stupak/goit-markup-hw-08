@@ -1,0 +1,122 @@
+.contact-link {
+  @media screen and(min-width: 768px) {
+    margin-left: 88px;
+    padding: 21px 0;
+  }
+
+  @media screen and(min-width: 1200px) {
+    margin-left: 305px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  @media screen and(min-width: 480px) {
+    &__item:last-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and(min-width: 768px) {
+    &__item:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  @media screen and(min-width: 1200px) {
+    &__item:last-child {
+      margin-left: 30px;
+    }
+    margin-bottom: 0px;
+  }
+
+  &__text {
+    @media screen and(min-width: 480px) {
+      font-size: 24px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__link-icon {
+    fill: $primary-text-color;
+    display: flex;
+    align-items: center;
+
+    &:hover .contact-link__icon-envelope {
+      fill: $accent-color;
+    }
+
+    &:hover .contact-link__icon-smartphone {
+      fill: $accent-color;
+    }
+
+    @media screen and(min-width: 768px) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and(min-width: 1200px) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and(max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+
+    &__icon {
+      visibility: hidden;
+    }
+    &__link:hover,
+    &__link:focus {
+      color: $accent-color;
+      font-size: 34px;
+    }
+  }
+
+  &__icon-envelope {
+    margin-right: 10px;
+    transition: $main-transition;
+
+    @media screen and(max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__icon-smartphone {
+    margin-right: 10px;
+    transition: $main-transition;
+
+    @media screen and(max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__contact-link {
+    color: $primary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color $main-transition;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    @media screen and(max-width: 768px) {
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+        font-size: 34px;
+        transition: color $main-transition;
+      }
+    }
+  }
+}

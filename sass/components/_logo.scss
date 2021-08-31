@@ -1,0 +1,16 @@
+.logo {
+  color: $title-text-color;
+  font-family: Raleway, cursive;
+  margin: auto 0;
+
+  font-size: 26px;
+  line-height: 1.19;
+
+  &__first-part {
+    color: $accent-color;
+  }
+
+  &--white {
+    color: $primary-white-color;
+  }
+}

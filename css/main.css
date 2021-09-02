@@ -51,24 +51,6 @@ address {
   padding: 0 15px;
 }
 
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1200px;
-  }
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -111,6 +93,8 @@ address {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
@@ -169,6 +153,9 @@ address {
 }
 
 .menu-button {
+  top: 10px;
+  right: 15px;
+  position: fixed;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -190,11 +177,6 @@ address {
   .menu-button {
     display: none;
   }
-}
-
-.icon-menu .icon-cross {
-  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-button .icon-menu {
@@ -264,15 +246,24 @@ address {
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 48px 40px;
     font-size: 40px;
+    -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .menu-container.is-open {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -299,12 +290,6 @@ address {
         -ms-flex-align: center;
             align-items: center;
     position: static;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .site-nav {
-    margin-bottom: 302px;
   }
 }
 
@@ -450,7 +435,14 @@ address {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 768px) {
+  .contact-link__big {
+    font-size: 34px;
+    color: #2196f3;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .contact-link__item:last-child {
     margin-bottom: 32px;
   }
@@ -519,6 +511,7 @@ address {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     margin-bottom: 64px;
+    margin-top: auto;
   }
   .contact-link__icon {
     visibility: hidden;
@@ -573,12 +566,13 @@ address {
     line-height: 28px;
     letter-spacing: 0.02em;
   }
-  .contact-link__contact-link:hover, .contact-link__contact-link:focus {
-    color: #2196f3;
-    font-size: 34px;
-    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+}
+
+.contact-link__contact-link:hover, .contact-link__contact-link:focus {
+  color: #2196f3;
+  font-size: 34px;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero {
@@ -586,8 +580,8 @@ address {
   background-color: #2f303a;
   padding: 200px 0;
   max-width: 1600px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/hero-background.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-background.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-background.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -595,8 +589,8 @@ address {
 
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/hero-background@2x.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-background@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-background@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-background@2x.jpg");
   }
 }
 
@@ -801,7 +795,7 @@ address {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 768px) {
   .team-list__item {
     margin-bottom: 30px;
   }
@@ -1031,6 +1025,7 @@ address {
       -ms-flex-direction: column;
           flex-direction: column;
   cursor: pointer;
+  border: 1px solid #eeeeee;
 }
 
 .portfolio-list__item:focus, .portfolio-list__item:hover {
@@ -1203,14 +1198,14 @@ address {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .address-footer {
-    margin-left: 0;
+    width: 50%;
     text-align: center;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .address-footer {
-    margin-left: 0;
+    width: 50%;
     text-align: left;
   }
 }
@@ -1250,10 +1245,7 @@ address {
 }
 
 .social-footer {
-  width: 206px;
   height: 80px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -1264,7 +1256,7 @@ address {
 
 @media screen and (min-width: 768px) {
   .social-footer {
-    margin-right: 0;
+    width: 50%;
   }
 }
 
@@ -1313,13 +1305,13 @@ address {
 
 @media screen and (min-width: 768px) {
   .mailing-footer {
-    margin: 0 auto;
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .mailing-footer {
-    margin-left: auto;
+    width: 50%;
   }
 }
 
@@ -1366,22 +1358,8 @@ address {
   border-radius: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   background-color: #2f303a;
   color: #ffffff;
-}
-
-@media screen and (min-width: 480px) {
-  .subscription-form__input {
-    width: 450px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .subscription-form__input {
-    width: 450px;
-  }
 }
 
 @media screen and (min-width: 1200px) {

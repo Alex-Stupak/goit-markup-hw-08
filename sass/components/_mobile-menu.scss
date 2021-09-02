@@ -1,4 +1,7 @@
 .menu-button {
+  top: 10px;
+  right: 15px;
+  position: fixed;
   justify-content: center;
   text-align: center;
   margin: 0;
@@ -19,9 +22,6 @@
   }
 }
 
-.icon-menu .icon-cross {
-  transition: $main-transition;
-}
 .menu-button .icon-menu {
   display: none;
 }
@@ -60,15 +60,18 @@
 
   @media screen and (max-width: 767px) {
     display: none;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 48px 40px;
     font-size: 40px;
+    transition: all $main-transition;
 
     &.is-open {
-      display: block;
+      display: flex;
+      flex-direction: column;
     }
   }
 

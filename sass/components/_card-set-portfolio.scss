@@ -6,10 +6,7 @@
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
     cursor: pointer;
-    border: 1px solid $color-card;
 
     &:focus,
     &:hover {

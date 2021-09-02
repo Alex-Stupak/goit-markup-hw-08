@@ -5,17 +5,10 @@
   }
 
   @media screen and(min-width: 1200px) {
-    margin-left: 305px;
+    margin-left: auto;
     display: flex;
     align-items: center;
     padding: 0;
-  }
-
-  &__big {
-    @media screen and (max-width: 768px) {
-      font-size: 34px;
-      color: $accent-color;
-    }
   }
   @media screen and (max-width: 768px) {
     &__item:last-child {
@@ -75,11 +68,6 @@
     &__icon {
       visibility: hidden;
     }
-    &__link:hover,
-    &__link:focus {
-      color: $accent-color;
-      font-size: 34px;
-    }
   }
 
   &__icon-envelope {
@@ -118,12 +106,11 @@
       line-height: 28px;
       letter-spacing: 0.02em;
     }
-
-    &:hover,
-    &:focus {
-      color: $accent-color;
+  }
+  .contact-link--big {
+    @media screen and (max-width: 768px) {
       font-size: 34px;
-      transition: color $main-transition;
+      color: $accent-color;
     }
   }
 }

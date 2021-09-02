@@ -7,7 +7,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 999;
+  z-index: 200;
   width: 40px;
   height: 40px;
 
@@ -47,8 +47,7 @@
   }
 
   @media screen and(min-width: 1200px) {
-    display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 24px 15px;
   }
@@ -66,7 +65,7 @@
     padding: 48px 40px;
     font-size: 40px;
     transition: all $main-transition;
-    z-index: 998;
+    z-index: 100;
 
     &.is-open {
       display: flex;

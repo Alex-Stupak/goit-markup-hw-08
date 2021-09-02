@@ -1,9 +1,6 @@
 .mailing-footer {
   @media screen and(min-width: 768px) {
-    width: 50%;
-  }
-  @media screen and(min-width: 1200px) {
-    width: 50%;
+    width: 100%;
   }
 
   &__title {
@@ -13,7 +10,7 @@
 .subscription-form {
   @media screen and(min-width: 1200px) {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     flex-direction: column;
   }

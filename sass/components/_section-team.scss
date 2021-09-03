@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: -15px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -15,12 +16,14 @@
     flex-wrap: nowrap;
   }
 
-  &__item {
-    @media screen and (max-width: 768px) {
-      &:not(:last-child) {
-        margin-bottom: 30px;
-      }
+  &__social-icons {
+    @media screen and (min-width: 1200px) {
+      width: 206px;
+      margin-left: 32px;
     }
+  }
+
+  &__item {
     @media screen and (min-width: 768px) {
       width: calc((100% - 4 * 15px) / 2);
       margin: 15px;
@@ -52,9 +55,6 @@
   }
 }
 .social-list {
-  display: flex;
-  justify-content: center;
-
   &__item:nth-child(-n + 4) {
     margin-left: 10px;
   }

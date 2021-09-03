@@ -9,10 +9,6 @@
     width: 50%;
   }
 
-  @media screen and (min-width: 1200px) {
-    margin-right: 93px;
-  }
-
   &__title {
     font-size: 14px;
     line-height: 16px;
@@ -28,6 +24,10 @@
 .social-list {
   display: flex;
   justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: start;
+  }
 
   &__item {
     display: flex;

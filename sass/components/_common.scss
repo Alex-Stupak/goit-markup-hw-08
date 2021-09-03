@@ -2,6 +2,10 @@ body {
   background-color: $primary-white-color;
   color: $primary-text-color;
   font-family: Roboto, sans-serif;
+
+  .is-open {
+    overflow-y: hidden;
+  }
 }
 
 img {
@@ -42,6 +46,8 @@ address {
 
 .blackish-blue-background {
   background-color: $background-color-hero;
+  padding: 60px 0;
+  align-items: baseline;
 }
 
 .container {

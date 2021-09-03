@@ -101,14 +101,14 @@
       color: $accent-color;
     }
 
-    @media screen and(max-width: 768px) {
+    @media screen and(max-width: 767px) {
       font-size: 24px;
       line-height: 28px;
       letter-spacing: 0.02em;
     }
   }
   .contact-link--big {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       font-size: 34px;
       color: $accent-color;
     }

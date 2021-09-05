@@ -1,6 +1,7 @@
 .mailing-footer {
   @media screen and(min-width: 768px) {
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__title {

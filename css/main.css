@@ -250,6 +250,8 @@ address {
 
 .menu-container {
   background-color: #ffffff;
+  -webkit-transition: tranform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: tranform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (max-width: 767px) {
@@ -262,8 +264,6 @@ address {
     width: 100%;
     padding: 48px 40px;
     font-size: 40px;
-    -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 100;
   }
   .menu-container.is-open {
@@ -809,6 +809,12 @@ address {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (min-width: 480px) {
+  .team-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team-list__item {
     width: calc((100% - 4 * 15px) / 2);
@@ -1012,6 +1018,9 @@ address {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: -15px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 
@@ -1024,6 +1033,12 @@ address {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1040,15 +1055,20 @@ address {
   }
 }
 
-.portfolio-list__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
+@media screen and (min-width: 768px) {
+  .portfolio-list__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 
 .portfolio-list__link:hover .portfolio-overlay,
@@ -1130,16 +1150,6 @@ address {
 }
 
 .card-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -1167,22 +1177,24 @@ address {
 }
 
 .address-footer {
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 60px;
   text-align: center;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .address-footer {
-    width: 50%;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .address-footer {
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .address-footer {
-    width: 50%;
     text-align: left;
   }
 }
@@ -1190,6 +1202,7 @@ address {
 @media screen and (min-width: 1200px) {
   .address-footer {
     margin-bottom: 0;
+    margin-right: 70px;
   }
 }
 
@@ -1290,7 +1303,8 @@ address {
 
 @media screen and (min-width: 768px) {
   .mailing-footer {
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

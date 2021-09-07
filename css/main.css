@@ -824,6 +824,7 @@ address {
   .team-list__item {
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
+    height: 100%;
   }
 }
 

@@ -54,10 +54,10 @@
 }
 .menu-container {
   background-color: $primary-white-color;
-  transition: tranform $main-transition;
 
   @media screen and (max-width: 767px) {
-    display: none;
+    transform: translateX(100%);
+    transition: transform $main-transition;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -71,6 +71,7 @@
     &.is-open {
       display: flex;
       flex-direction: column;
+      transform: translateX(0%);
     }
   }
 
